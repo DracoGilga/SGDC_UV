@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace Front
 {
     /// <summary>
-    /// Lógica de interacción para CU_03.xaml
+    /// Interaction logic for CU_03.xaml
     /// </summary>
     public partial class CU_03 : Window
     {
