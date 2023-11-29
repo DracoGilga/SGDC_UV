@@ -1,0 +1,15 @@
+C:\Users\hp\Desktop\APDS\SGDC_UV\Front\bin\Debug\Front.exe.config
+C:\Users\hp\Desktop\APDS\SGDC_UV\Front\bin\Debug\Front.exe
+C:\Users\hp\Desktop\APDS\SGDC_UV\Front\bin\Debug\Front.pdb
+C:\Users\hp\Desktop\APDS\SGDC_UV\Front\obj\Debug\Front.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\APDS\SGDC_UV\Front\obj\Debug\MainWindow.g.cs
+C:\Users\hp\Desktop\APDS\SGDC_UV\Front\obj\Debug\App.g.cs
+C:\Users\hp\Desktop\APDS\SGDC_UV\Front\obj\Debug\Front_MarkupCompile.cache
+C:\Users\hp\Desktop\APDS\SGDC_UV\Front\obj\Debug\Front_MarkupCompile.lref
+C:\Users\hp\Desktop\APDS\SGDC_UV\Front\obj\Debug\MainWindow.baml
+C:\Users\hp\Desktop\APDS\SGDC_UV\Front\obj\Debug\Front.g.resources
+C:\Users\hp\Desktop\APDS\SGDC_UV\Front\obj\Debug\Front.Properties.Resources.resources
+C:\Users\hp\Desktop\APDS\SGDC_UV\Front\obj\Debug\Front.csproj.GenerateResource.cache
+C:\Users\hp\Desktop\APDS\SGDC_UV\Front\obj\Debug\Front.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\APDS\SGDC_UV\Front\obj\Debug\Front.exe
+C:\Users\hp\Desktop\APDS\SGDC_UV\Front\obj\Debug\Front.pdb
