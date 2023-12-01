@@ -10,29 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Front
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para MenuPrincipal.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MenuPrincipal : Window
     {
-        public MainWindow()
+        public MenuPrincipal()
         {
             InitializeComponent();
         }
 
-        private void IniciarSesion(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void CerrarVentana(object sender, MouseButtonEventArgs e)
         {
-
 
         }
     }
