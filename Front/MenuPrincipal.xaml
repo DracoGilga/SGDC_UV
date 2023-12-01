@@ -19,6 +19,16 @@
                     <GradientStop Color="#3AA9AD" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
+            <Image x:Name="UVLogo" Source="/Recursos/uv.png" Grid.Column="1" Margin="26,1,25,345" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
         </Border>
 
         <Grid>
@@ -33,10 +43,17 @@
         <Border Background="White" Grid.Column="1" CornerRadius="0,10,10,0">
             <TextBlock x:Name="tbTituloSistema" TextWrapping="Wrap" Text="Sistema de generación de constancias de profesores de la FEI" Foreground="#FF3AA9AD" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" TextAlignment="Center" Margin="0,10,0,0" Width="444"/>
         </Border>
-        <Image x:Name="btnCerrarVentana" Source="/Recursos/salir.png" Grid.Column="1" Margin="608,3,10,382" MouseLeftButtonDown="CerrarVentana"/>
-        <Image x:Name="btnConstancias" Source="/Recursos/constancia.png" Grid.Column="1" Margin="144,129,423,217"/>
-        <Image x:Name="btnProfesor" Source="/Recursos/profesor.png" Grid.Column="1" Margin="423,129,143,217"/>
-        <TextBlock x:Name="tbConstancias" TextWrapping="Wrap" Text="Constancias" Foreground="White" Background="#FF3AA9AD" HorizontalAlignment="Left" Width="111" Margin="133,235,0,0" FontSize="14" VerticalAlignment="Top" TextAlignment="Center" Grid.Column="1"/>
-        <TextBlock x:Name="tbProfesores" TextWrapping="Wrap" Text="Profesores" Foreground="White" Background="#FF3AA9AD" HorizontalAlignment="Left" Width="111" Margin="412,235,0,0" FontSize="14" VerticalAlignment="Top" TextAlignment="Center" Grid.Column="1"/>
+        <Image x:Name="btnCerrarSesion" Source="/Recursos/salir.png" Grid.Column="1" Margin="608,3,10,382" MouseLeftButtonDown="CerrarSesion"/>
+        <Image x:Name="btnConstancias" Source="/Recursos/constancia.png" Grid.Column="1" Margin="145,112,423,234"/>
+        <Image x:Name="btnProfesor" Source="/Recursos/profesor.png" Grid.Column="1" Margin="424,112,143,234"/>
+        <Image x:Name="btnConstularConstancia" Source="/Recursos/consultarConstancia.png" Grid.Column="1" Margin="145,253,422,93"/>
+        <Image x:Name="btnEditarProfesor" Source="/Recursos/editarProfesor.png" Grid.Column="1" Margin="424,253,143,93"/>
+
+        <TextBlock x:Name="tbConstancias" TextWrapping="Wrap" Text="Constancias" Foreground="White" Background="#FF3AA9AD" HorizontalAlignment="Left" Width="111" Margin="134,211,0,0" FontSize="14" VerticalAlignment="Top" TextAlignment="Center" Grid.Column="1"/>
+        <TextBlock x:Name="tbProfesores" TextWrapping="Wrap" Text="Profesores" Foreground="White" Background="#FF3AA9AD" HorizontalAlignment="Left" Width="111" Margin="413,0,0,0" FontSize="14" VerticalAlignment="Center" TextAlignment="Center" Grid.Column="1"/>
+        <TextBlock x:Name="tbConsultarConstancias" TextWrapping="Wrap" Text="Consultar constancias" Foreground="White" Background="#FF3AA9AD" HorizontalAlignment="Left" Width="111" Margin="133,346,0,0" FontSize="14" VerticalAlignment="Top" TextAlignment="Center" Grid.Column="1"/>
+        <TextBlock x:Name="tbEditarProfesor" TextWrapping="Wrap" Text="Editar profesores" Foreground="White" Background="#FF3AA9AD" HorizontalAlignment="Left" Width="111" Margin="413,346,0,0" FontSize="14" VerticalAlignment="Top" TextAlignment="Center" Grid.Column="1"/>
+
+        <TextBlock x:Name="tbTituloMenuPrincipal" TextWrapping="Wrap" Foreground="White" HorizontalAlignment="Center" Width="111" Margin="0,113,0,0" FontSize="18" VerticalAlignment="Top" TextAlignment="Center" FontWeight="Bold"><Run Text="Universidad Veracruzana"/><LineBreak/><Run/><LineBreak/><Run Text="Facultad de Estadística e Informática"/></TextBlock>
     </Grid>
 </Window>

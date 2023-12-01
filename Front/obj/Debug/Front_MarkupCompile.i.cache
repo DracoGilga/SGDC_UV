@@ -4,13 +4,22 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\endol\Source\Repos\SGDC_UV\Front\obj\Debug\
+=======
+C:\Users\hp\Desktop\APDS\SGDC_UV\Front\obj\Debug\
+>>>>>>> d2befe876f47f1ea305334f3ef89147aba353f97
 Front
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 C:\Users\endol\Source\Repos\SGDC_UV\Front\App.xaml
 5908467550
+=======
+C:\Users\hp\Desktop\APDS\SGDC_UV\Front\App.xaml
+41404073120
+>>>>>>> d2befe876f47f1ea305334f3ef89147aba353f97
 
 101887034689
 13-38814620

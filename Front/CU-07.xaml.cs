@@ -23,5 +23,15 @@ namespace Front
         {
             InitializeComponent();
         }
+
+        private void Aceptar(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Cerrar(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
