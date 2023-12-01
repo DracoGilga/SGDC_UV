@@ -49,7 +49,7 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock x:Name="tbCorreoElectronico" Text="Correo Electrónico" Foreground="Black" Margin="0,-23,240,23" Grid.ColumnSpan="4"/>
+                            <TextBlock x:Name="tbCorreoElectronico" Text="Correo Electrónico" Foreground="Black" Margin="0,-23,201,23" Grid.ColumnSpan="4"/>
                             <TextBox x:Name="tbxCorreoElectronico" BorderBrush="{x:Null}" Grid.ColumnSpan="4"/>
 
                         </Grid>
@@ -63,7 +63,7 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock x:Name="tbContraseña" Text="Contraseña" Foreground="Black" Margin="0,-23,240,23" Grid.ColumnSpan="3"/>
+                            <TextBlock x:Name="tbContraseña" Text="Contraseña" Foreground="Black" Margin="0,-23,193,23" Grid.ColumnSpan="3"/>
                             <TextBox x:Name="tbxContraseña" BorderBrush="{x:Null}" Grid.ColumnSpan="3"/>
 
                         </Grid>
@@ -83,7 +83,6 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Image x:Name="btnCerrarVentana" Source="/Recursos/salir.png" Grid.Column="1" Margin="436,0,10,442" MouseLeftButtonDown="CerrarVentana"/>
 
     </Grid>
 </Window>
