@@ -19,6 +19,7 @@ C:\Users\Alvaro\Source\Repos\SGDC_UV\Front\obj\Debug\Front.exe
 C:\Users\Alvaro\Source\Repos\SGDC_UV\Front\obj\Debug\Front.pdb
 C:\Users\Alvaro\Source\Repos\SGDC_UV\Front\obj\Debug\MenuPrincipal.g.cs
 C:\Users\Alvaro\Source\Repos\SGDC_UV\Front\obj\Debug\MenuPrincipal.baml
+<<<<<<< HEAD
 C:\Users\hp\Desktop\APDS\SGDC_UV\Front\bin\Debug\Front.exe.config
 C:\Users\hp\Desktop\APDS\SGDC_UV\Front\bin\Debug\Front.exe
 C:\Users\hp\Desktop\APDS\SGDC_UV\Front\bin\Debug\Front.pdb
@@ -40,3 +41,26 @@ C:\Users\hp\Desktop\APDS\SGDC_UV\Front\obj\Debug\Front.csproj.GenerateResource.c
 C:\Users\hp\Desktop\APDS\SGDC_UV\Front\obj\Debug\Front.csproj.CoreCompileInputs.cache
 C:\Users\hp\Desktop\APDS\SGDC_UV\Front\obj\Debug\Front.exe
 C:\Users\hp\Desktop\APDS\SGDC_UV\Front\obj\Debug\Front.pdb
+=======
+C:\Users\r3n4c\Source\Repos\SGDC_UV\Front\bin\Debug\Front.exe.config
+C:\Users\r3n4c\Source\Repos\SGDC_UV\Front\bin\Debug\Front.exe
+C:\Users\r3n4c\Source\Repos\SGDC_UV\Front\bin\Debug\Front.pdb
+C:\Users\r3n4c\Source\Repos\SGDC_UV\Front\obj\Debug\Front.csproj.AssemblyReference.cache
+C:\Users\r3n4c\Source\Repos\SGDC_UV\Front\obj\Debug\CU-03.g.cs
+C:\Users\r3n4c\Source\Repos\SGDC_UV\Front\obj\Debug\CU-07.g.cs
+C:\Users\r3n4c\Source\Repos\SGDC_UV\Front\obj\Debug\MainWindow.g.cs
+C:\Users\r3n4c\Source\Repos\SGDC_UV\Front\obj\Debug\MenuPrincipal.g.cs
+C:\Users\r3n4c\Source\Repos\SGDC_UV\Front\obj\Debug\App.g.cs
+C:\Users\r3n4c\Source\Repos\SGDC_UV\Front\obj\Debug\Front_MarkupCompile.cache
+C:\Users\r3n4c\Source\Repos\SGDC_UV\Front\obj\Debug\Front_MarkupCompile.lref
+C:\Users\r3n4c\Source\Repos\SGDC_UV\Front\obj\Debug\CU-03.baml
+C:\Users\r3n4c\Source\Repos\SGDC_UV\Front\obj\Debug\CU-07.baml
+C:\Users\r3n4c\Source\Repos\SGDC_UV\Front\obj\Debug\MainWindow.baml
+C:\Users\r3n4c\Source\Repos\SGDC_UV\Front\obj\Debug\MenuPrincipal.baml
+C:\Users\r3n4c\Source\Repos\SGDC_UV\Front\obj\Debug\Front.g.resources
+C:\Users\r3n4c\Source\Repos\SGDC_UV\Front\obj\Debug\Front.Properties.Resources.resources
+C:\Users\r3n4c\Source\Repos\SGDC_UV\Front\obj\Debug\Front.csproj.GenerateResource.cache
+C:\Users\r3n4c\Source\Repos\SGDC_UV\Front\obj\Debug\Front.csproj.CoreCompileInputs.cache
+C:\Users\r3n4c\Source\Repos\SGDC_UV\Front\obj\Debug\Front.exe
+C:\Users\r3n4c\Source\Repos\SGDC_UV\Front\obj\Debug\Front.pdb
+>>>>>>> 60ec44fb3993c2fc5c294abe629f1bb8e12dd8a3

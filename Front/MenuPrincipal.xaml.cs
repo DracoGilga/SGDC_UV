@@ -24,7 +24,7 @@ namespace Front
             InitializeComponent();
         }
 
-        private void CerrarVentana(object sender, MouseButtonEventArgs e)
+        private void CerrarSesion(object sender, MouseButtonEventArgs e)
         {
 
         }

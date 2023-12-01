@@ -127,5 +127,12 @@
     <Resource Include="Recursos\constancia.png" />
     <Resource Include="Recursos\profesor.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\consultarConstancia.png" />
+    <Resource Include="Recursos\editarProfesor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\uv.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
