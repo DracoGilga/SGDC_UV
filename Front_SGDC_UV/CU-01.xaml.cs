@@ -24,14 +24,5 @@ namespace Front_SGDC_UV
             InitializeComponent();
         }
 
-        private void Regresar(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Agregar(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
