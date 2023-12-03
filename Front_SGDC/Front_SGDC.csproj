@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Recursos\constancia.png" />
+    <None Remove="Recursos\consultarConstancia.png" />
+    <None Remove="Recursos\editarProfesor.png" />
+    <None Remove="Recursos\profesor.png" />
+    <None Remove="Recursos\salir.png" />
+    <None Remove="Recursos\uv.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ServiceModel.Duplex" Version="4.10.*" />
+    <PackageReference Include="System.ServiceModel.Federation" Version="4.10.*" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.10.*" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.10.*" />
+    <PackageReference Include="System.ServiceModel.Security" Version="4.10.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Recursos\constancia.png" />
+    <Resource Include="Recursos\consultarConstancia.png" />
+    <Resource Include="Recursos\editarProfesor.png" />
+    <Resource Include="Recursos\profesor.png" />
+    <Resource Include="Recursos\salir.png" />
+    <Resource Include="Recursos\uv.png" />
+  </ItemGroup>
+
+</Project>

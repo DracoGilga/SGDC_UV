@@ -1,10 +1,10 @@
-﻿<Window x:Class="Front_SGDC_UV.MainWindow"
+﻿<Window x:Class="Front_SGDC.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Front_SGDC_UV"
-        mc:Ignorable="d"
+        xmlns:local="clr-namespace:Front_SGDC"
+                mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -49,8 +49,8 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock x:Name="tbCorreoElectronico" Text="Correo Electrónico" Foreground="Black" Margin="0,-23,201,23" Grid.ColumnSpan="4"/>
-                            <TextBox x:Name="tbxCorreoElectronico" BorderBrush="{x:Null}" Grid.ColumnSpan="4"/>
+                            <TextBlock x:Name="tbUsuario" Text="Usuario" Foreground="Black" Margin="0,-23,201,23" Grid.ColumnSpan="4"/>
+                            <TextBox x:Name="tbxUsuario" BorderBrush="{x:Null}" Grid.ColumnSpan="4"/>
 
                         </Grid>
                     </Border>
@@ -64,7 +64,7 @@
                             </Grid.ColumnDefinitions>
 
                             <TextBlock x:Name="tbContraseña" Text="Contraseña" Foreground="Black" Margin="0,-23,193,23" Grid.ColumnSpan="3"/>
-                            <TextBox x:Name="tbxContraseña" BorderBrush="{x:Null}" Grid.ColumnSpan="3"/>
+                            <TextBox x:Name="tbxContrasena" BorderBrush="{x:Null}" Grid.ColumnSpan="3"/>
 
                         </Grid>
                     </Border>

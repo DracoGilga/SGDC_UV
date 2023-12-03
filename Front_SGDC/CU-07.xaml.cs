@@ -10,29 +10,27 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Front_SGDC_UV
+namespace Front_SGDC
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para CU_07.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CU_07 : Window
     {
-        public MainWindow()
+        public CU_07()
         {
             InitializeComponent();
         }
 
-        private void IniciarSesion(object sender, RoutedEventArgs e)
+        private void Aceptar(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void CerrarVentana(object sender, MouseButtonEventArgs e)
+        private void Cerrar(object sender, RoutedEventArgs e)
         {
-
 
         }
     }

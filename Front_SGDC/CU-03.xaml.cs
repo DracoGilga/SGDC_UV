@@ -12,26 +12,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Front_SGDC_UV
+namespace Front_SGDC
 {
     /// <summary>
-    /// Lógica de interacción para CU_07.xaml
+    /// Lógica de interacción para CU_03.xaml
     /// </summary>
-    public partial class CU_07 : Window
+    public partial class CU_03 : Window
     {
-        public CU_07()
+        public CU_03()
         {
             InitializeComponent();
         }
 
-        private void Aceptar(object sender, RoutedEventArgs e)
+        private void btnGuardarCambios_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void Cerrar(object sender, RoutedEventArgs e)
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
 
         }
     }
 }
+

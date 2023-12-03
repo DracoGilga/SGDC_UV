@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Front_SGDC_UV
+namespace Front_SGDC
 {
     /// <summary>
     /// Lógica de interacción para MenuPrincipal.xaml
@@ -23,7 +23,6 @@ namespace Front_SGDC_UV
         {
             InitializeComponent();
         }
-
         private void CerrarSesion(object sender, MouseButtonEventArgs e)
         {
 
@@ -46,3 +45,4 @@ namespace Front_SGDC_UV
         }
     }
 }
+
