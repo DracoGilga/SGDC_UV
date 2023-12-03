@@ -67,6 +67,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\DAO\ConstanciaDAO.cs" />
     <Compile Include="Model\DataClasses1Constancias.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,7 +81,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Model\DAO\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Model\DataClasses1Constancias.dbml">
