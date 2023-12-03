@@ -15,5 +15,7 @@ namespace WcfService1
     {
         [OperationContract]
         List<ConstanciaUnion1> ListarConstancia();
+        [OperationContract]
+        Boolean Login(String usuario, String password);
     }
 }
