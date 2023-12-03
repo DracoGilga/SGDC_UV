@@ -1,16 +1,7 @@
-﻿using System;
+﻿using Front_SGDC.Modelo;
+using ServiceReference1;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Front_SGDC
 {
@@ -19,9 +10,11 @@ namespace Front_SGDC
     /// </summary>
     public partial class CU_07 : Window
     {
+        ConstanciaViewModel constanciaViewModel = new ConstanciaViewModel();
         public CU_07()
         {
             InitializeComponent();
+            MostrarVentana();
         }
 
         private void Aceptar(object sender, RoutedEventArgs e)
@@ -32,6 +25,23 @@ namespace Front_SGDC
         private void Cerrar(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private async void MostrarVentana()
+        {
+            List<ConstanciaUnion1> listaConstancia = await constanciaViewModel.ListarConstancia();
+            foreach (var item in listaConstancia)
+            {
+                var constancia = new
+                {
+                    item.constancia.Id_Constancia,
+                    item.constancia.fechaCreacionConstancia,
+                    item.profesor.nombreCompleto,
+                    item.profesor.Id_profesor
+                };
+
+                tablaConstancias.Items.Add(constancia);
+            }
         }
     }
 }

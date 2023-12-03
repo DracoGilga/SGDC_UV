@@ -13,19 +13,27 @@ namespace Front_SGDC.Modelo
         {
         }
 
-        public async Task<Boolean> InicioSesion(String usuario, String password)
+        public async Task<bool> InicioSesion(String usuario, String password)
         {
-            Service1Client servicio = new Service1Client();
-            if (servicio != null)
+            try
             {
-                bool result = await servicio.LoginAsync(usuario, password);
-                if (result)
-                    return true;
+                Service1Client servicio = new Service1Client();
+                if (servicio != null)
+                {
+                    bool result = await servicio.LoginAsync(usuario,password);
+                    if (result)
+                        return true;
+                    else
+                        return false;
+                }
                 else
                     return false;
             }
-            else
+            catch (Exception)
+            {
                 return false;
+            }
+            
         }
     }
 }
