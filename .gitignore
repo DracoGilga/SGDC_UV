@@ -363,5 +363,5 @@ MigrationBackup/
 FodyWeavers.xsd
 
 #mios
-Debug
+Debug/
 .vs 

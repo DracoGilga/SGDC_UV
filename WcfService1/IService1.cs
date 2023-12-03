@@ -14,6 +14,6 @@ namespace WcfService1
     public interface IService1
     {
         [OperationContract]
-        List<Constancia> ListarConstancia();
+        List<ConstanciaUnion1> ListarConstancia();
     }
 }
