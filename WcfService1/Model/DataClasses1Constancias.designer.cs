@@ -151,13 +151,13 @@ namespace WcfService1.Model
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _FK_Id_Firma;
+		private int _Id_Constancia;
 		
 		private System.DateTime _fechaCreacionConstancia;
 		
-		private int _Id_Constancia;
-		
 		private int _FK_id_Profesor;
+		
+		private int _FK_Id_Firma;
 		
 		private EntitySet<ConstanciaImparticion> _ConstanciaImparticion;
 		
@@ -175,14 +175,14 @@ namespace WcfService1.Model
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnFK_Id_FirmaChanging(int value);
-    partial void OnFK_Id_FirmaChanged();
-    partial void OnfechaCreacionConstanciaChanging(System.DateTime value);
-    partial void OnfechaCreacionConstanciaChanged();
     partial void OnId_ConstanciaChanging(int value);
     partial void OnId_ConstanciaChanged();
+    partial void OnfechaCreacionConstanciaChanging(System.DateTime value);
+    partial void OnfechaCreacionConstanciaChanged();
     partial void OnFK_id_ProfesorChanging(int value);
     partial void OnFK_id_ProfesorChanged();
+    partial void OnFK_Id_FirmaChanging(int value);
+    partial void OnFK_Id_FirmaChanged();
     #endregion
 		
 		public Constancia()
@@ -196,26 +196,22 @@ namespace WcfService1.Model
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FK_Id_Firma", DbType="Int NOT NULL")]
-		public int FK_Id_Firma
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Constancia", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id_Constancia
 		{
 			get
 			{
-				return this._FK_Id_Firma;
+				return this._Id_Constancia;
 			}
 			set
 			{
-				if ((this._FK_Id_Firma != value))
+				if ((this._Id_Constancia != value))
 				{
-					if (this._FirmaElectronica.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnFK_Id_FirmaChanging(value);
+					this.OnId_ConstanciaChanging(value);
 					this.SendPropertyChanging();
-					this._FK_Id_Firma = value;
-					this.SendPropertyChanged("FK_Id_Firma");
-					this.OnFK_Id_FirmaChanged();
+					this._Id_Constancia = value;
+					this.SendPropertyChanged("Id_Constancia");
+					this.OnId_ConstanciaChanged();
 				}
 			}
 		}
@@ -240,26 +236,6 @@ namespace WcfService1.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Constancia", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int Id_Constancia
-		{
-			get
-			{
-				return this._Id_Constancia;
-			}
-			set
-			{
-				if ((this._Id_Constancia != value))
-				{
-					this.OnId_ConstanciaChanging(value);
-					this.SendPropertyChanging();
-					this._Id_Constancia = value;
-					this.SendPropertyChanged("Id_Constancia");
-					this.OnId_ConstanciaChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FK_id_Profesor", DbType="Int NOT NULL")]
 		public int FK_id_Profesor
 		{
@@ -280,6 +256,30 @@ namespace WcfService1.Model
 					this._FK_id_Profesor = value;
 					this.SendPropertyChanged("FK_id_Profesor");
 					this.OnFK_id_ProfesorChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FK_Id_Firma", DbType="Int NOT NULL")]
+		public int FK_Id_Firma
+		{
+			get
+			{
+				return this._FK_Id_Firma;
+			}
+			set
+			{
+				if ((this._FK_Id_Firma != value))
+				{
+					if (this._FirmaElectronica.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnFK_Id_FirmaChanging(value);
+					this.SendPropertyChanging();
+					this._FK_Id_Firma = value;
+					this.SendPropertyChanged("FK_Id_Firma");
+					this.OnFK_Id_FirmaChanged();
 				}
 			}
 		}
@@ -533,7 +533,7 @@ namespace WcfService1.Model
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_constanciaImparticion", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_constanciaImparticion", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Id_constanciaImparticion
 		{
 			get
@@ -810,6 +810,10 @@ namespace WcfService1.Model
 		
 		private string _resultado;
 		
+		private string _Cargo;
+		
+		private string _Licenciatura;
+		
 		private int _FK_Id_constancia;
 		
 		private EntityRef<Constancia> _Constancia;
@@ -830,6 +834,10 @@ namespace WcfService1.Model
     partial void OnnombreProyectoChanged();
     partial void OnresultadoChanging(string value);
     partial void OnresultadoChanged();
+    partial void OnCargoChanging(string value);
+    partial void OnCargoChanged();
+    partial void OnLicenciaturaChanging(string value);
+    partial void OnLicenciaturaChanged();
     partial void OnFK_Id_constanciaChanging(int value);
     partial void OnFK_Id_constanciaChanged();
     #endregion
@@ -840,7 +848,7 @@ namespace WcfService1.Model
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_constanciaJurado", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_constanciaJurado", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Id_constanciaJurado
 		{
 			get
@@ -956,6 +964,46 @@ namespace WcfService1.Model
 					this._resultado = value;
 					this.SendPropertyChanged("resultado");
 					this.OnresultadoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cargo", DbType="VarChar(255) NOT NULL", CanBeNull=false)]
+		public string Cargo
+		{
+			get
+			{
+				return this._Cargo;
+			}
+			set
+			{
+				if ((this._Cargo != value))
+				{
+					this.OnCargoChanging(value);
+					this.SendPropertyChanging();
+					this._Cargo = value;
+					this.SendPropertyChanged("Cargo");
+					this.OnCargoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Licenciatura", DbType="VarChar(255) NOT NULL", CanBeNull=false)]
+		public string Licenciatura
+		{
+			get
+			{
+				return this._Licenciatura;
+			}
+			set
+			{
+				if ((this._Licenciatura != value))
+				{
+					this.OnLicenciaturaChanging(value);
+					this.SendPropertyChanging();
+					this._Licenciatura = value;
+					this.SendPropertyChanged("Licenciatura");
+					this.OnLicenciaturaChanged();
 				}
 			}
 		}
@@ -1087,7 +1135,7 @@ namespace WcfService1.Model
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_constanciaPLADEA", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_constanciaPLADEA", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Id_constanciaPLADEA
 		{
 			get
@@ -1334,7 +1382,7 @@ namespace WcfService1.Model
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_constanciaProyecto", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_constanciaProyecto", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Id_constanciaProyecto
 		{
 			get
@@ -1569,7 +1617,7 @@ namespace WcfService1.Model
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_firma", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_firma", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Id_firma
 		{
 			get
@@ -1728,7 +1776,7 @@ namespace WcfService1.Model
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_personalAdministrativo", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_personalAdministrativo", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Id_personalAdministrativo
 		{
 			get
@@ -1861,7 +1909,7 @@ namespace WcfService1.Model
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_profesor", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_profesor", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Id_profesor
 		{
 			get
