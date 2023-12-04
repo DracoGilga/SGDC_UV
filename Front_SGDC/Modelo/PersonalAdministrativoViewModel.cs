@@ -35,5 +35,26 @@ namespace Front_SGDC.Modelo
             }
             
         }
+
+        public async Task<bool> InicioSesion2(PersonalAdministrativo personalAdministrativo)
+        {
+            try
+            {
+                Service1Client servicio = new Service1Client();
+                if (servicio != null)
+                {
+                    if (await servicio.login2Async(personalAdministrativo))
+                        return true;
+                    else
+                        return false;
+                }
+                else
+                    return false;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

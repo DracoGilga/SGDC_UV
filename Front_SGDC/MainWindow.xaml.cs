@@ -1,4 +1,5 @@
 ﻿using Front_SGDC.Modelo;
+using ServiceReference1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,12 +27,19 @@ namespace Front_SGDC
             InitializeComponent();
         }
 
-        private void IniciarSesion(object sender, RoutedEventArgs e)
+        private async void IniciarSesion(object sender, RoutedEventArgs e)
         {
             PersonalAdministrativoViewModel personalAdministrativoViewModel = new PersonalAdministrativoViewModel();
-            if (personalAdministrativoViewModel.InicioSesion(tbxUsuario.Text, tbxContrasena.Text).Result)
+            PersonalAdministrativo personalAdministrativo = new PersonalAdministrativo()
             {
-                MessageBox.Show("Bienvenido");
+                usuario = tbxUsuario.Text,
+                password = tbxContrasena.Text
+            };
+            if (await personalAdministrativoViewModel.InicioSesion2(personalAdministrativo))
+            {
+                MenuPrincipal menuPrincipal = new MenuPrincipal();
+                menuPrincipal.Show();
+                this.Close();
             }
             else
             {

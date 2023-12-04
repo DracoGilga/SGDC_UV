@@ -7,18 +7,31 @@ namespace WcfService1.Model.DAO
 {
     public class ProfesorDAO
     {
-        public static List<string> ObtenerNumerosPersonales()
+        public static List<Profesor> ObtenerNumerosPersonales()
         {
             try
             {
                 DataClasses1ConstanciasDataContext DBConexion = GetConexion();
 
-                var consulta = from p in DBConexion.Profesors
-                               select p.numeroPersonal;
-
-                List<string> numerosPersonales = consulta.ToList();
-
-                return numerosPersonales;
+                List<Profesor> profesores = new List<Profesor>();
+                IQueryable<Profesor> consulta = DBConexion.Profesors.Select(p => p);
+                if(consulta != null)
+                {
+                    foreach(Profesor profesor in consulta)
+                    {
+                        profesores.Add(new Profesor()
+                        {
+                            Id_profesor = profesor.Id_profesor,
+                            nombreCompleto = profesor.nombreCompleto,
+                            numeroPersonal = profesor.numeroPersonal
+                        });
+                    }
+                    return profesores;
+                }
+                else
+                {
+                    return null;
+                }
             }
             catch (Exception)
             {

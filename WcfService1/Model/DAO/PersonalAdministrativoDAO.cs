@@ -36,5 +36,23 @@ namespace WcfService1.Model.DAO
             return new DataClasses1ConstanciasDataContext(global::System.Configuration.
                 ConfigurationManager.ConnectionStrings["DBConstanciasConnectionDracoGilga"].ConnectionString);//cambiar el string de acuerdo a la base de datos
         }
+
+        internal static bool Login2(PersonalAdministrativo personalAdministrativo)
+        {
+            try
+            {
+                DataClasses1ConstanciasDataContext DBConexion = GetConexion();
+                PersonalAdministrativo consulta = DBConexion.PersonalAdministrativos.Where(p => p.usuario == personalAdministrativo.usuario && p.password == personalAdministrativo.password).First();
+
+                if (consulta != null)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace Front_SGDC
 
         private void Aceptar(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("IMPLEMENTACION DE DETALLES EN EL ENTREGABLE 2");
         }
 
         private void Cerrar(object sender, RoutedEventArgs e)
