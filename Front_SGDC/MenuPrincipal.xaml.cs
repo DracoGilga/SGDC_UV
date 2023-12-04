@@ -37,11 +37,13 @@ namespace Front_SGDC
         }
         private void btnConstularConstancia_clic(object sender, MouseButtonEventArgs e)
         {
-
+            CU_07 window = new CU_07();
+            bool? result = window.ShowDialog();
         }
         private void btnEditarProfesor_clic(object sender, MouseButtonEventArgs e)
         {
-
+            CU_03 window = new CU_03();
+            bool? result = window.ShowDialog();
         }
     }
 }
