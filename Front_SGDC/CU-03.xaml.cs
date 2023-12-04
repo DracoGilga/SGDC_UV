@@ -31,24 +31,41 @@ namespace Front_SGDC
         }
         private async void CargarComboBox()
         {
-            List<string> numerosPersonales = await profesorViewModel.ObtenerNumerosPersonales();
+            List<Profesor> numerosPersonales = await profesorViewModel.ObtenerNumerosPersonales();
             cbNumeroDePersonal.ItemsSource = numerosPersonales;
         }
 
-        private void btnGuardarCambios_Click(object sender, RoutedEventArgs e)
+        private async void btnGuardarCambios_Click(object sender, RoutedEventArgs e)
         {
-
+            if(cbNumeroDePersonal.SelectedIndex != -1 && tbxNuevoNombreCompletoDeProfesor.Text != "")
+            {
+                Profesor profesor = new Profesor();
+                profesor.Id_profesor = (cbNumeroDePersonal.SelectedItem as Profesor).Id_profesor;
+                profesor.numeroPersonal = (cbNumeroDePersonal.SelectedItem as Profesor).numeroPersonal;
+                profesor.nombreCompleto = tbxNuevoNombreCompletoDeProfesor.Text;
+                if (await profesorViewModel.ModificarProfesor(profesor))
+                    MessageBox.Show("Se ha actualizado el nombre completo del profesor");
+                else
+                    MessageBox.Show("No se ha podido actualizar el nombre completo del profesor");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado un profesor o no se ha ingresado un nombre completo");
+            }
         }
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
 
         private async void cbNumeroDePersonal_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            List<string> listaConstancia = await profesorViewModel.ObtenerNumerosPersonales();
-            
+            if (cbNumeroDePersonal.SelectedIndex != -1)
+            {
+                tbxNuevoNombreCompletoDeProfesor.Text = (cbNumeroDePersonal.SelectedItem as Profesor).nombreCompleto;
+            }
         }
     }
 }

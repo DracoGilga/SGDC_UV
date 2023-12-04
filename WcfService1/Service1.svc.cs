@@ -28,7 +28,7 @@ namespace WcfService1
             return Model.DAO.ProfesorDAO.ModificarProfesor(profesor);
         }
 
-        public List<string> ObtenerNumerosPersonales()
+        public List<Profesor> ObtenerNumerosPersonales()
         {
             return Model.DAO.ProfesorDAO.ObtenerNumerosPersonales();
         }

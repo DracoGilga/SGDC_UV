@@ -29,7 +29,14 @@
             <Ellipse Width="40" Height="40" Fill="#4EB1B6" Canvas.Left="76" Canvas.Top="250" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Ellipse Width="40" Height="40" Fill="#4EB1B6" Canvas.Left="14" Canvas.Top="390" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </Canvas>
-        <ComboBox x:Name="cbNumeroDePersonal" HorizontalAlignment="Left" Margin="305,151,0,0" VerticalAlignment="Top" Width="128" Height="26" SelectionChanged="cbNumeroDePersonal_SelectionChanged"/>
+        <ComboBox x:Name="cbNumeroDePersonal" 
+          HorizontalAlignment="Left" 
+          Margin="305,151,0,0" 
+          VerticalAlignment="Top" 
+          Width="128" 
+          Height="26" 
+          SelectionChanged="cbNumeroDePersonal_SelectionChanged" 
+          DisplayMemberPath="numeroPersonal"/>
         <Label x:Name="lbNombreActual" Content="" HorizontalAlignment="Left" Margin="465,146,0,0" VerticalAlignment="Top" Width="326" Height="39"/>
 
     </Grid>

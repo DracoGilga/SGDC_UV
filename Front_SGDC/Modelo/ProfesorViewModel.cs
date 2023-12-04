@@ -14,16 +14,16 @@ namespace Front_SGDC.Modelo
 
         }
 
-        public async Task<List<string>?> ObtenerNumerosPersonales()
+        public async Task<List<Profesor>?> ObtenerNumerosPersonales()
         {
             Service1Client servicio = new Service1Client();
             if (servicio != null)
             {
-                string[] lista = await servicio.ObtenerNumerosPersonalesAsync();
+                Profesor[] lista = await servicio.ObtenerNumerosPersonalesAsync();
 
                 if (lista != null)
                 {
-                    List<string> listaConstancia = new List<string>(lista);
+                    List<Profesor> listaConstancia = new List<Profesor>(lista);
                     return listaConstancia;
                 }
                 else

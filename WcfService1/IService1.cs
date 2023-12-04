@@ -22,6 +22,6 @@ namespace WcfService1
         [OperationContract]
         bool ModificarProfesor(Profesor profesor);
         [OperationContract]
-        List<string> ObtenerNumerosPersonales();
+        List<Profesor> ObtenerNumerosPersonales();
     }
 }
