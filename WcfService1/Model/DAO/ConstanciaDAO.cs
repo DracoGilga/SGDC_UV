@@ -7,6 +7,7 @@ namespace WcfService1.Model.DAO
 {
     public class ConstanciaDAO
     {
+        /*
         public static List<ConstanciaUnion1> ConsultarConstancias()
         {
             try
@@ -57,6 +58,7 @@ namespace WcfService1.Model.DAO
                 return null;
             }
         }
+        */
 
         public static DataClasses1ConstanciasDataContext GetConexion()
         {

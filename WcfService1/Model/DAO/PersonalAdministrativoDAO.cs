@@ -7,6 +7,7 @@ namespace WcfService1.Model.DAO
 {
     public class PersonalAdministrativoDAO
     {
+        /*
         public static Boolean Login(String usuario, String password)
         {
             try
@@ -27,7 +28,7 @@ namespace WcfService1.Model.DAO
                 return false;
             }
         }
-
+        */
 
         public static DataClasses1ConstanciasDataContext GetConexion()
         {

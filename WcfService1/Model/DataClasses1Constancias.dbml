@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DBConstancias" Class="DataClasses1ConstanciasDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Table Name="dbo.Constancia" Member="Constancia">
+  <Table Name="dbo.Constancia" Member="Constancias">
     <Type Name="Constancia">
       <Column Name="Id_Constancia" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="fechaCreacionConstancia" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="FK_id_Profesor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="FK_Id_Firma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Constancia_ConstanciaImparticion" Member="ConstanciaImparticion" ThisKey="Id_Constancia" OtherKey="FK_Id_constancia" Type="ConstanciaImparticion" />
-      <Association Name="Constancia_ConstanciaJurado" Member="ConstanciaJurado" ThisKey="Id_Constancia" OtherKey="FK_Id_constancia" Type="ConstanciaJurado" />
-      <Association Name="Constancia_ConstanciaPLADEA" Member="ConstanciaPLADEA" ThisKey="Id_Constancia" OtherKey="FK_Id_constancia" Type="ConstanciaPLADEA" />
-      <Association Name="Constancia_ConstanciaProyecto" Member="ConstanciaProyecto" ThisKey="Id_Constancia" OtherKey="FK_Id_constancia" Type="ConstanciaProyecto" />
+      <Association Name="Constancia_ConstanciaImparticion" Member="ConstanciaImparticions" ThisKey="Id_Constancia" OtherKey="FK_Id_constancia" Type="ConstanciaImparticion" />
+      <Association Name="Constancia_ConstanciaJurado" Member="ConstanciaJurados" ThisKey="Id_Constancia" OtherKey="FK_Id_constancia" Type="ConstanciaJurado" />
+      <Association Name="Constancia_ConstanciaPLADEA" Member="ConstanciaPLADEAs" ThisKey="Id_Constancia" OtherKey="FK_Id_constancia" Type="ConstanciaPLADEA" />
+      <Association Name="Constancia_ConstanciaProyecto" Member="ConstanciaProyectos" ThisKey="Id_Constancia" OtherKey="FK_Id_constancia" Type="ConstanciaProyecto" />
       <Association Name="FirmaElectronica_Constancia" Member="FirmaElectronica" ThisKey="FK_Id_Firma" OtherKey="Id_firma" Type="FirmaElectronica" IsForeignKey="true" />
       <Association Name="Profesor_Constancia" Member="Profesor" ThisKey="FK_id_Profesor" OtherKey="Id_profesor" Type="Profesor" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.ConstanciaImparticion" Member="ConstanciaImparticion">
+  <Table Name="dbo.ConstanciaImparticion" Member="ConstanciaImparticions">
     <Type Name="ConstanciaImparticion">
       <Column Name="Id_constanciaImparticion" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="bloque" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
@@ -28,7 +28,7 @@
       <Association Name="Constancia_ConstanciaImparticion" Member="Constancia" ThisKey="FK_Id_constancia" OtherKey="Id_Constancia" Type="Constancia" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.ConstanciaJurado" Member="ConstanciaJurado">
+  <Table Name="dbo.ConstanciaJurado" Member="ConstanciaJurados">
     <Type Name="ConstanciaJurado">
       <Column Name="Id_constanciaJurado" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="fechaPresentacion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
@@ -42,7 +42,7 @@
       <Association Name="Constancia_ConstanciaJurado" Member="Constancia" ThisKey="FK_Id_constancia" OtherKey="Id_Constancia" Type="Constancia" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.ConstanciaPLADEA" Member="ConstanciaPLADEA">
+  <Table Name="dbo.ConstanciaPLADEA" Member="ConstanciaPLADEAs">
     <Type Name="ConstanciaPLADEA">
       <Column Name="Id_constanciaPLADEA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="acciones" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
@@ -54,7 +54,7 @@
       <Association Name="Constancia_ConstanciaPLADEA" Member="Constancia" ThisKey="FK_Id_constancia" OtherKey="Id_Constancia" Type="Constancia" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.ConstanciaProyecto" Member="ConstanciaProyecto">
+  <Table Name="dbo.ConstanciaProyecto" Member="ConstanciaProyectos">
     <Type Name="ConstanciaProyecto">
       <Column Name="Id_constanciaProyecto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="duracion" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
@@ -66,16 +66,16 @@
       <Association Name="Constancia_ConstanciaProyecto" Member="Constancia" ThisKey="FK_Id_constancia" OtherKey="Id_Constancia" Type="Constancia" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.FirmaElectronica" Member="FirmaElectronica">
+  <Table Name="dbo.FirmaElectronica" Member="FirmaElectronicas">
     <Type Name="FirmaElectronica">
       <Column Name="Id_firma" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="clave" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
       <Column Name="fechaCreacion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="fechaExpiracion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Association Name="FirmaElectronica_Constancia" Member="Constancia" ThisKey="Id_firma" OtherKey="FK_Id_Firma" Type="Constancia" />
+      <Association Name="FirmaElectronica_Constancia" Member="Constancias" ThisKey="Id_firma" OtherKey="FK_Id_Firma" Type="Constancia" />
     </Type>
   </Table>
-  <Table Name="dbo.PersonalAdministrativo" Member="PersonalAdministrativo">
+  <Table Name="dbo.PersonalAdministrativo" Member="PersonalAdministrativos">
     <Type Name="PersonalAdministrativo">
       <Column Name="Id_personalAdministrativo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="nombreCompleto" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
@@ -83,12 +83,12 @@
       <Column Name="usuario" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
-  <Table Name="dbo.Profesor" Member="Profesor">
+  <Table Name="dbo.Profesor" Member="Profesors">
     <Type Name="Profesor">
       <Column Name="Id_profesor" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="nombreCompleto" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="numeroPersonal" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="Profesor_Constancia" Member="Constancia" ThisKey="Id_profesor" OtherKey="FK_id_Profesor" Type="Constancia" />
+      <Association Name="Profesor_Constancia" Member="Constancias" ThisKey="Id_profesor" OtherKey="FK_id_Profesor" Type="Constancia" />
     </Type>
   </Table>
 </Database>

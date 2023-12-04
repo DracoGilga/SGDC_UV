@@ -70,6 +70,7 @@
     <Compile Include="Model\ConstanciaUnion1.cs" />
     <Compile Include="Model\DAO\ConstanciaDAO.cs" />
     <Compile Include="Model\DAO\PersonalAdministrativoDAO.cs" />
+    <Compile Include="Model\DAO\ProfesorDAO.cs" />
     <Compile Include="Model\DataClasses1Constancias.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

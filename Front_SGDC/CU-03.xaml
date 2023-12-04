@@ -8,22 +8,11 @@
         Title="CU_03" Height="500" Width="930">
     <Grid>
         <Label x:Name="lbTituloModificarProfesor" Content="SGDC&#xD;&#xA;Modificar profesor" HorizontalAlignment="Left" Margin="286,10,0,0" VerticalAlignment="Top" Foreground="Black" Height="110" Width="412" FontSize="36" HorizontalContentAlignment="Center" FontWeight="Bold"/>
-        <Label x:Name="lbNombreProfesor" Content="Nombre profesor:" HorizontalAlignment="Left" Margin="137,130,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="143" Background="#FF3AA9AD" Foreground="White"/>
-        <TextBox x:Name="tbxNombreDeProfesor" HorizontalAlignment="Left" Margin="285,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="229" Height="31"/>
-        <Label x:Name="lbApellidoMaterno" Content="Apellido Materno:" HorizontalAlignment="Left" Margin="137,185,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="143" Background="#FF3AA9AD" Foreground="White"/>
-        <TextBox x:Name="tbxApellidoMaterno" HorizontalAlignment="Left" Margin="285,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="229" Height="31"/>
-        <Label x:Name="lbApellidoPaterno" Content="Apellido Paterno:" HorizontalAlignment="Left" Margin="137,237,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="143" Background="#FF3AA9AD" Foreground="White"/>
-        <TextBox x:Name="tbxApellidoPaterno" HorizontalAlignment="Left" Margin="285,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="229" Height="31"/>
-        <Label x:Name="lbCorreoElectronico" Content="Correo electrónico:" HorizontalAlignment="Left" Margin="533,128,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="143" Background="#FF3AA9AD" Foreground="White"/>
-        <TextBox x:Name="tbxCorreoElectronico" HorizontalAlignment="Left" Margin="681,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="229" Height="31"/>
-        <Label x:Name="lbContraseña" Content="Contraseña:" HorizontalAlignment="Left" Margin="533,183,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="143" RenderTransformOrigin="0.512,0.815" Background="#FF3AA9AD" Foreground="White"/>
-        <TextBox x:Name="tbxContraseña" HorizontalAlignment="Left" Margin="681,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="229" Height="31"/>
+        <Label x:Name="lbNombreCompletoProfesor" Content="Nombre completo de profesor:" HorizontalAlignment="Left" Margin="146,213,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="224" Background="#FF3AA9AD" Foreground="White"/>
+        <TextBox x:Name="tbxNuevoNombreCompletoDeProfesor" HorizontalAlignment="Left" Margin="409,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Height="31"/>
+        <Label x:Name="lbNumeroDePersonal" Content="Número de personal:" HorizontalAlignment="Left" Margin="146,151,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="138" Background="#FF3AA9AD" Foreground="White"/>
         <Button x:Name="btnGuardarCambios" Content="Guardar cambios" HorizontalAlignment="Left" Margin="586,393,0,0" VerticalAlignment="Top" FontSize="20" Width="168" Background="#FF3AA9AD" Foreground="White" Click="btnGuardarCambios_Click"/>
         <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="780,393,0,0" VerticalAlignment="Top" FontSize="20" Width="126" Background="#FF3AA9AD" Foreground="White" Click="btnCancelar_Click"/>
-        <Label x:Name="lbMatricula" Content="Matrícula:" HorizontalAlignment="Left" Margin="138,307,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="143" Background="#FF3AA9AD" Foreground="White"/>
-        <Label x:Name="lbRFC" Content="RFC:" HorizontalAlignment="Left" Margin="138,350,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="143" Background="#FF3AA9AD" Foreground="White"/>
-        <TextBox x:Name="tbxMatricula" HorizontalAlignment="Left" Margin="286,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="229" Height="31"/>
-        <TextBox x:Name="tbxRFC" HorizontalAlignment="Left" Margin="286,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="229" Height="31"/>
 
         <Border CornerRadius="10,0,0,10" Margin="0,0,798,0">
             <Border.Background>
@@ -40,6 +29,8 @@
             <Ellipse Width="40" Height="40" Fill="#4EB1B6" Canvas.Left="76" Canvas.Top="250" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Ellipse Width="40" Height="40" Fill="#4EB1B6" Canvas.Left="14" Canvas.Top="390" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </Canvas>
+        <ComboBox x:Name="cbNumeroDePersonal" HorizontalAlignment="Left" Margin="305,151,0,0" VerticalAlignment="Top" Width="128" Height="26" SelectionChanged="cbNumeroDePersonal_SelectionChanged"/>
+        <Label x:Name="lbNombreActual" Content="" HorizontalAlignment="Left" Margin="465,146,0,0" VerticalAlignment="Top" Width="326" Height="39"/>
 
     </Grid>
 </Window>
