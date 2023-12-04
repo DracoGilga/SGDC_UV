@@ -1087,7 +1087,11 @@ namespace ServiceReference1
         {
             return base.Channel.ModificarProfesorAsync(profesor);
         }
-        
+
+        public System.Threading.Tasks.Task<bool> AgregarProfesorAsync(ServiceReference1.Profesor profesor)
+        {
+            return base.Channel.AgregarProfesorAsync(profesor);
+        }
         public System.Threading.Tasks.Task<string[]> ObtenerNumerosPersonalesAsync()
         {
             return base.Channel.ObtenerNumerosPersonalesAsync();

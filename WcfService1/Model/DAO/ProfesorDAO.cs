@@ -58,7 +58,47 @@ namespace WcfService1.Model.DAO
             }
         }
 
+        public static bool RegistrarProfesor(Profesor nuevoProfesor)
+        {
+            try
+            {
+               
+                DataClasses1ConstanciasDataContext DBConexion = GetConexion();
 
+             
+                var consulta = from p in DBConexion.Profesors
+                                        where p.numeroPersonal == nuevoProfesor.numeroPersonal
+                                        select p;
+
+                var profesorExistente = consulta.SingleOrDefault();
+
+                if (profesorExistente == null)
+                {
+                  
+                    Profesor profesorNuevo = new Profesor
+                    {
+                        nombreCompleto = nuevoProfesor.nombreCompleto,
+                        numeroPersonal = nuevoProfesor.numeroPersonal
+                        
+                    };
+
+                    DBConexion.Profesors.InsertOnSubmit(profesorNuevo);
+                    DBConexion.SubmitChanges();
+
+                    return true;
+                }
+                else
+                {
+                   
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+               
+                return false;
+            }
+        }
         public static DataClasses1ConstanciasDataContext GetConexion()
         {
             return new DataClasses1ConstanciasDataContext(global::System.Configuration.

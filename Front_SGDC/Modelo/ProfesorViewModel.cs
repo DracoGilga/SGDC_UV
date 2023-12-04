@@ -54,5 +54,28 @@ namespace Front_SGDC.Modelo
                 return false;
             }
         }
+
+        public async Task<bool> AgregarProfesor(Profesor profesor)
+        {
+            try
+            {
+                Service1Client servicio = new Service1Client();
+                if (servicio != null)
+                {
+                    bool result = await servicio.AgregarProfesorAsync(profesor);
+                    if (result)
+                        return true;
+                    else
+                        return false;
+                }
+                else
+                    return false;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
     }
 }
