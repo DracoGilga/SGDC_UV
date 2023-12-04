@@ -13,7 +13,7 @@ namespace WcfService1
     // NOTE: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione Service1.svc o Service1.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class Service1 : IService1
     {
-        /*
+        
         public List<ConstanciaUnion1> ListarConstancia()
         {
             return Model.DAO.ConstanciaDAO.ConsultarConstancias();
@@ -22,7 +22,7 @@ namespace WcfService1
         {
             return Model.DAO.PersonalAdministrativoDAO.Login(usuario, password);
         }
-        */
+        
         public bool ModificarProfesor(Profesor profesor)
         {
             return Model.DAO.ProfesorDAO.ModificarProfesor(profesor);

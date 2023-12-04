@@ -7,7 +7,7 @@ namespace WcfService1.Model.DAO
 {
     public class ConstanciaDAO
     {
-        /*
+        
         public static List<ConstanciaUnion1> ConsultarConstancias()
         {
             try
@@ -15,8 +15,8 @@ namespace WcfService1.Model.DAO
                 DataClasses1ConstanciasDataContext DBConexion = GetConexion();
                 List<ConstanciaUnion1> constancias = new List<ConstanciaUnion1>();
                 var consulta = (
-                    from c in DBConexion.Constancia
-                    join p in DBConexion.Profesor on c.FK_id_Profesor equals p.Id_profesor
+                    from c in DBConexion.Constancias
+                    join p in DBConexion.Profesors on c.FK_id_Profesor equals p.Id_profesor
                     select new
                     {
                         Profesor = p,
@@ -58,7 +58,6 @@ namespace WcfService1.Model.DAO
                 return null;
             }
         }
-        */
 
         public static DataClasses1ConstanciasDataContext GetConexion()
         {

@@ -13,12 +13,12 @@ namespace WcfService1
     [ServiceContract]
     public interface IService1
     {
-        /*
+        
         [OperationContract]
         List<ConstanciaUnion1> ListarConstancia();
         [OperationContract]
         Boolean Login(String usuario, String password);
-        */
+        
         [OperationContract]
         bool ModificarProfesor(Profesor profesor);
         [OperationContract]

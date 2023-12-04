@@ -62,7 +62,7 @@ namespace WcfService1.Model.DAO
         public static DataClasses1ConstanciasDataContext GetConexion()
         {
             return new DataClasses1ConstanciasDataContext(global::System.Configuration.
-                ConfigurationManager.ConnectionStrings["DBConstanciasConnectionString"].ConnectionString);
+                ConfigurationManager.ConnectionStrings["DBConstanciasConnectionDracoGilga"].ConnectionString);
         }
     }
 }

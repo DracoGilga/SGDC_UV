@@ -7,14 +7,13 @@ namespace WcfService1.Model.DAO
 {
     public class PersonalAdministrativoDAO
     {
-        /*
         public static Boolean Login(String usuario, String password)
         {
             try
             {
                 DataClasses1ConstanciasDataContext DBConexion = GetConexion();
                 var consulta = (
-                    from p in DBConexion.PersonalAdministrativo
+                    from p in DBConexion.PersonalAdministrativos
                     where p.usuario == usuario && p.password == password
                     select p).FirstOrDefault();
 
@@ -28,7 +27,6 @@ namespace WcfService1.Model.DAO
                 return false;
             }
         }
-        */
 
         public static DataClasses1ConstanciasDataContext GetConexion()
         {
