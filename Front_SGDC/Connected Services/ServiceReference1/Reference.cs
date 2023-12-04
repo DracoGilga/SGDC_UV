@@ -1021,6 +1021,9 @@ namespace ServiceReference1
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ObtenerNumerosPersonales", ReplyAction="http://tempuri.org/IService1/ObtenerNumerosPersonalesResponse")]
         System.Threading.Tasks.Task<ServiceReference1.Profesor[]> ObtenerNumerosPersonalesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/login2", ReplyAction="http://tempuri.org/IService1/login2Response")]
+        System.Threading.Tasks.Task<bool> login2Async(ServiceReference1.PersonalAdministrativo personalAdministrativo);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
@@ -1091,6 +1094,11 @@ namespace ServiceReference1
         public System.Threading.Tasks.Task<ServiceReference1.Profesor[]> ObtenerNumerosPersonalesAsync()
         {
             return base.Channel.ObtenerNumerosPersonalesAsync();
+        }
+        
+        public System.Threading.Tasks.Task<bool> login2Async(ServiceReference1.PersonalAdministrativo personalAdministrativo)
+        {
+            return base.Channel.login2Async(personalAdministrativo);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

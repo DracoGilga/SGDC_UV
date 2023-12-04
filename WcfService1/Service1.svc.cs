@@ -22,7 +22,12 @@ namespace WcfService1
         {
             return Model.DAO.PersonalAdministrativoDAO.Login(usuario, password);
         }
-        
+
+        public bool login2(PersonalAdministrativo personalAdministrativo)
+        {
+            return Model.DAO.PersonalAdministrativoDAO.Login2(personalAdministrativo);
+        }
+
         public bool ModificarProfesor(Profesor profesor)
         {
             return Model.DAO.ProfesorDAO.ModificarProfesor(profesor);

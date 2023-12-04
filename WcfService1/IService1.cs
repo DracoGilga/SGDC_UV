@@ -23,5 +23,7 @@ namespace WcfService1
         bool ModificarProfesor(Profesor profesor);
         [OperationContract]
         List<Profesor> ObtenerNumerosPersonales();
+        [OperationContract]
+        bool login2(PersonalAdministrativo personalAdministrativo);
     }
 }
