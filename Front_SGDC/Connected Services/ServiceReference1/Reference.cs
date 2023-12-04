@@ -938,6 +938,73 @@ namespace ServiceReference1
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PersonalAdministrativo", Namespace="http://schemas.datacontract.org/2004/07/WcfService1.Model")]
+    public partial class PersonalAdministrativo : object
+    {
+        
+        private int Id_personalAdministrativoField;
+        
+        private string nombreCompletoField;
+        
+        private string passwordField;
+        
+        private string usuarioField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id_personalAdministrativo
+        {
+            get
+            {
+                return this.Id_personalAdministrativoField;
+            }
+            set
+            {
+                this.Id_personalAdministrativoField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string nombreCompleto
+        {
+            get
+            {
+                return this.nombreCompletoField;
+            }
+            set
+            {
+                this.nombreCompletoField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string password
+        {
+            get
+            {
+                return this.passwordField;
+            }
+            set
+            {
+                this.passwordField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string usuario
+        {
+            get
+            {
+                return this.usuarioField;
+            }
+            set
+            {
+                this.usuarioField = value;
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1
@@ -947,7 +1014,7 @@ namespace ServiceReference1
         System.Threading.Tasks.Task<ServiceReference1.ConstanciaUnion1[]> ListarConstanciaAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Login", ReplyAction="http://tempuri.org/IService1/LoginResponse")]
-        System.Threading.Tasks.Task<bool> LoginAsync(string usuario, string password);
+        System.Threading.Tasks.Task<ServiceReference1.PersonalAdministrativo> LoginAsync(string usuario, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ModificarProfesor", ReplyAction="http://tempuri.org/IService1/ModificarProfesorResponse")]
         System.Threading.Tasks.Task<bool> ModificarProfesorAsync(ServiceReference1.Profesor profesor);
@@ -1011,7 +1078,7 @@ namespace ServiceReference1
             return base.Channel.ListarConstanciaAsync();
         }
         
-        public System.Threading.Tasks.Task<bool> LoginAsync(string usuario, string password)
+        public System.Threading.Tasks.Task<ServiceReference1.PersonalAdministrativo> LoginAsync(string usuario, string password)
         {
             return base.Channel.LoginAsync(usuario, password);
         }

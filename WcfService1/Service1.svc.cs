@@ -18,7 +18,7 @@ namespace WcfService1
         {
             return Model.DAO.ConstanciaDAO.ConsultarConstancias();
         }
-        public bool Login(String usuario, String password)
+        public PersonalAdministrativo Login(String usuario, String password)
         {
             return Model.DAO.PersonalAdministrativoDAO.Login(usuario, password);
         }

@@ -7,31 +7,34 @@ namespace WcfService1.Model.DAO
 {
     public class PersonalAdministrativoDAO
     {
-        public static Boolean Login(String usuario, String password)
+        public static PersonalAdministrativo Login(String usuario, String password)
         {
             try
             {
                 DataClasses1ConstanciasDataContext DBConexion = GetConexion();
-                var consulta = (
-                    from p in DBConexion.PersonalAdministrativos
-                    where p.usuario == usuario && p.password == password
-                    select p).FirstOrDefault();
+                PersonalAdministrativo consulta = DBConexion.PersonalAdministrativos.Where(p => p.usuario == usuario && p.password == password).First();
 
                 if (consulta != null)
-                    return true;
+                    return new PersonalAdministrativo()
+                    {
+                        Id_personalAdministrativo = consulta.Id_personalAdministrativo,
+                        nombreCompleto = consulta.nombreCompleto,
+                        usuario = consulta.usuario,
+                        password = consulta.password
+                    };
                 else
-                    return false;
+                    return null;
             }
             catch (Exception)
             {
-                return false;
+                return null;
             }
         }
 
         public static DataClasses1ConstanciasDataContext GetConexion()
         {
             return new DataClasses1ConstanciasDataContext(global::System.Configuration.
-                ConfigurationManager.ConnectionStrings["DBConstanciasConnectionDracoGilga"].ConnectionString);
+                ConfigurationManager.ConnectionStrings["DBConstanciasConnectionDracoGilga"].ConnectionString);//cambiar el string de acuerdo a la base de datos
         }
     }
 }

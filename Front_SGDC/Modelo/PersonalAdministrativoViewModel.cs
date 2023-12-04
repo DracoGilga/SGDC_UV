@@ -20,8 +20,8 @@ namespace Front_SGDC.Modelo
                 Service1Client servicio = new Service1Client();
                 if (servicio != null)
                 {
-                    bool result = await servicio.LoginAsync(usuario,password);
-                    if (result)
+                    PersonalAdministrativo result = await servicio.LoginAsync(usuario, password);
+                    if (result != null)
                         return true;
                     else
                         return false;
