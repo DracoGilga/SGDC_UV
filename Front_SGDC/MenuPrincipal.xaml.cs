@@ -31,7 +31,8 @@ namespace Front_SGDC
         }
         private void btnConstancias_clic(object sender, MouseButtonEventArgs e)
         {
-            
+            WindowCU_05 window = new WindowCU_05();
+            window.ShowDialog();
         }
         private void btnProfesor_clic(object sender, MouseButtonEventArgs e)
         {

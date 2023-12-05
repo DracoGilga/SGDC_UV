@@ -64,17 +64,26 @@ namespace WcfService1.Model.DAO
             try
             {
                 constancia.fechaCreacionConstancia = DateTime.Now;
+                var consulta = new Constancia()
+                {
+                    Id_Constancia = 0,
+                    fechaCreacionConstancia = constancia.fechaCreacionConstancia,
+                    FK_id_Profesor = constancia.FK_id_Profesor, 
+                    FK_Id_Firma = constancia.FK_Id_Firma
+                };
                 DataClasses1ConstanciasDataContext DBConexion = GetConexion();
-                DBConexion.Constancias.InsertOnSubmit(constancia);
+                DBConexion.Constancias.InsertOnSubmit(consulta);
                 DBConexion.SubmitChanges();
 
-                return constancia.Id_Constancia;
+                return consulta.Id_Constancia;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine($"Error al registrar constancia: {ex.Message}");
                 return -1;
             }
         }
+
 
         public static DataClasses1ConstanciasDataContext GetConexion()
         {

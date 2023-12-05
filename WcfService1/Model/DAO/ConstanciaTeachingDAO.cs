@@ -7,28 +7,41 @@ namespace WcfService1.Model.DAO
 {
     public class ConstanciaTeachingDAO
     {
-        public static bool CrearConstanciaTeaching(Constancia constancia, ConstanciaImparticion constanciaDocencia)
+        public static bool CrearConstanciaTeaching(Constancia constancia,ConstanciaImparticion constanciaImparticion)
         {
             try
             {
-                constanciaDocencia.FK_Id_constancia = ConstanciaDAO.RegistrarConstancia(constancia);
-                if(constanciaDocencia.FK_Id_constancia != -1)
+                constancia.Id_Constancia = ConstanciaDAO.RegistrarConstancia(constancia);
+                if (constancia.Id_Constancia != -1)
                 {
+                    var consulta = new ConstanciaImparticion()
+                    {
+                        FK_Id_constancia = constancia.Id_Constancia,
+                        bloque = constanciaImparticion.bloque,
+                        credito = constanciaImparticion.credito,
+                        esperienciaEducativa = constanciaImparticion.esperienciaEducativa,
+                        hora = constanciaImparticion.hora,
+                        mes = constanciaImparticion.mes,
+                        prograamaEducativo = constanciaImparticion.prograamaEducativo,
+                        seccion = constanciaImparticion.seccion,
+                        semana = constanciaImparticion.semana
+                    };
                     DataClasses1ConstanciasDataContext DBConexion = GetConexion();
-                    DBConexion.Constancias.InsertOnSubmit(constancia);
-                    DBConexion.ConstanciaImparticions.InsertOnSubmit(constanciaDocencia);
+                    DBConexion.ConstanciaImparticions.InsertOnSubmit(consulta);
                     DBConexion.SubmitChanges();
+
                     return true;
                 }
                 else
                     return false;
-                
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine($"Error al registrar constancia: {ex.Message}");
                 return false;
             }
         }
+
 
         public static DataClasses1ConstanciasDataContext GetConexion()
         {

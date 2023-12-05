@@ -41,5 +41,23 @@ namespace WcfService1
         {
             return Model.DAO.ProfesorDAO.ObtenerNumerosPersonales();
         }
+
+        //constanciass
+        public bool CrearConstanciaTeaching(Constancia constancia,ConstanciaImparticion constanciaImparticion)
+        {
+            return Model.DAO.ConstanciaTeachingDAO.CrearConstanciaTeaching(constancia,constanciaImparticion);
+        }  
+        public bool CrearConstanciaJudge(Constancia constancia, ConstanciaJurado constanciaJurado)
+        {
+            return Model.DAO.ConstanciJudgeDAO.CrearConstanciaJudge(constancia, constanciaJurado);
+        }
+        public bool CrearConstanciaProject(Constancia constancia, ConstanciaProyecto constanciaProyecto)
+        {
+            return Model.DAO.ConstanciaProjectDAO.CrearConstanciaProject(constancia, constanciaProyecto);
+        }
+        public bool CrearConstanciaPladea(Constancia constancia, ConstanciaPLADEA constanciaPladea)
+        {
+            return Model.DAO.ConstanciaPladeaDAO.CrearConstanciaPladea(constancia, constanciaPladea);
+        }
     }
 }

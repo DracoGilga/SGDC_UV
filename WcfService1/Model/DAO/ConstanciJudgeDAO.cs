@@ -11,12 +11,22 @@ namespace WcfService1.Model.DAO
         {
             try
             {
-                constanciaJurado.FK_Id_constancia = ConstanciaDAO.RegistrarConstancia(constancia);
-                if(constanciaJurado.FK_Id_constancia == -1)
+                constancia.Id_Constancia = ConstanciaDAO.RegistrarConstancia(constancia);
+                if(constancia.Id_Constancia != -1)
                 {
+                    var consulta = new ConstanciaJurado()
+                    {
+                        FK_Id_constancia = constancia.Id_Constancia,
+                        fechaPresentacion = constanciaJurado.fechaPresentacion,
+                        modalidad = constanciaJurado.modalidad,
+                        nombreAlumno = constanciaJurado.nombreAlumno,
+                        nombreProyecto = constanciaJurado.nombreProyecto,
+                        resultado = constanciaJurado.resultado,
+                        Cargo = constanciaJurado.Cargo,
+                        Licenciatura = constanciaJurado.Licenciatura,
+                    };
                     DataClasses1ConstanciasDataContext DBConexion = GetConexion();
-                    DBConexion.Constancias.InsertOnSubmit(constancia);
-                    DBConexion.ConstanciaJurados.InsertOnSubmit(constanciaJurado);
+                    DBConexion.ConstanciaJurados.InsertOnSubmit(consulta);
                     DBConexion.SubmitChanges();
                     return true;
                 }

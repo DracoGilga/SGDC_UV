@@ -80,6 +80,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1Constancias.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Parametros.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>

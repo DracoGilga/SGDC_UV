@@ -27,5 +27,16 @@ namespace WcfService1
         bool login2(PersonalAdministrativo personalAdministrativo);
         [OperationContract]
         bool AgregarProfesor(Profesor profesor);
+
+
+        //constancias
+        [OperationContract]
+        bool CrearConstanciaTeaching(Constancia constancia,ConstanciaImparticion constanciaImparticion);
+        [OperationContract]
+        bool CrearConstanciaJudge(Constancia constancia, ConstanciaJurado constanciaJurado);
+        [OperationContract]
+        bool CrearConstanciaProject(Constancia constancia, ConstanciaProyecto constanciaProyecto);
+        [OperationContract]
+        bool CrearConstanciaPladea(Constancia constancia, ConstanciaPLADEA constanciaPladea);
     }
 }

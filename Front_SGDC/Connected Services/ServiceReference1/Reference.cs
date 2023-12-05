@@ -1027,6 +1027,18 @@ namespace ServiceReference1
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AgregarProfesor", ReplyAction="http://tempuri.org/IService1/AgregarProfesorResponse")]
         System.Threading.Tasks.Task<bool> AgregarProfesorAsync(ServiceReference1.Profesor profesor);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CrearConstanciaTeaching", ReplyAction="http://tempuri.org/IService1/CrearConstanciaTeachingResponse")]
+        System.Threading.Tasks.Task<bool> CrearConstanciaTeachingAsync(ServiceReference1.Constancia constancia, ServiceReference1.ConstanciaImparticion constanciaImparticion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CrearConstanciaJudge", ReplyAction="http://tempuri.org/IService1/CrearConstanciaJudgeResponse")]
+        System.Threading.Tasks.Task<bool> CrearConstanciaJudgeAsync(ServiceReference1.Constancia constancia, ServiceReference1.ConstanciaJurado constanciaJurado);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CrearConstanciaProject", ReplyAction="http://tempuri.org/IService1/CrearConstanciaProjectResponse")]
+        System.Threading.Tasks.Task<bool> CrearConstanciaProjectAsync(ServiceReference1.Constancia constancia, ServiceReference1.ConstanciaProyecto constanciaProyecto);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CrearConstanciaPladea", ReplyAction="http://tempuri.org/IService1/CrearConstanciaPladeaResponse")]
+        System.Threading.Tasks.Task<bool> CrearConstanciaPladeaAsync(ServiceReference1.Constancia constancia, ServiceReference1.ConstanciaPLADEA constanciaPladea);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
@@ -1107,6 +1119,26 @@ namespace ServiceReference1
         public System.Threading.Tasks.Task<bool> AgregarProfesorAsync(ServiceReference1.Profesor profesor)
         {
             return base.Channel.AgregarProfesorAsync(profesor);
+        }
+        
+        public System.Threading.Tasks.Task<bool> CrearConstanciaTeachingAsync(ServiceReference1.Constancia constancia, ServiceReference1.ConstanciaImparticion constanciaImparticion)
+        {
+            return base.Channel.CrearConstanciaTeachingAsync(constancia, constanciaImparticion);
+        }
+        
+        public System.Threading.Tasks.Task<bool> CrearConstanciaJudgeAsync(ServiceReference1.Constancia constancia, ServiceReference1.ConstanciaJurado constanciaJurado)
+        {
+            return base.Channel.CrearConstanciaJudgeAsync(constancia, constanciaJurado);
+        }
+        
+        public System.Threading.Tasks.Task<bool> CrearConstanciaProjectAsync(ServiceReference1.Constancia constancia, ServiceReference1.ConstanciaProyecto constanciaProyecto)
+        {
+            return base.Channel.CrearConstanciaProjectAsync(constancia, constanciaProyecto);
+        }
+        
+        public System.Threading.Tasks.Task<bool> CrearConstanciaPladeaAsync(ServiceReference1.Constancia constancia, ServiceReference1.ConstanciaPLADEA constanciaPladea)
+        {
+            return base.Channel.CrearConstanciaPladeaAsync(constancia, constanciaPladea);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()
