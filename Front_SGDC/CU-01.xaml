@@ -11,10 +11,10 @@
         <Label x:Name="lbNombreCompletoProfesor" Content="Nombre completo de profesor:" HorizontalAlignment="Left" Margin="146,213,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="224" Background="#FF3AA9AD" Foreground="White"/>
         <TextBox x:Name="tbxNumeroPersonal" HorizontalAlignment="Left" Margin="362,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" Height="31"/>
         <Label x:Name="lbNumeroDePersonal" Content="Número de personal:" HorizontalAlignment="Left" Margin="146,151,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="138" Background="#FF3AA9AD" Foreground="White"/>
-        <Button x:Name="btnRegistrarProfesor" Content="Agregar Profesor" HorizontalAlignment="Left" Margin="586,393,0,0" VerticalAlignment="Top" FontSize="20" Width="168" Background="#FF3AA9AD" Foreground="White" Click="btnAgregarProfesor_Click"/>
-        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="780,393,0,0" VerticalAlignment="Top" FontSize="20" Width="126" Background="#FF3AA9AD" Foreground="White" Click="btnCancelar_Click"/>
+        <Button x:Name="btnRegistrarProfesor" Content="Agregar Profesor" HorizontalAlignment="Left" Margin="234,296,0,0" VerticalAlignment="Top" FontSize="20" Width="168" Background="#FF3AA9AD" Foreground="White" Click="btnAgregarProfesor_Click"/>
+        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="428,296,0,0" VerticalAlignment="Top" FontSize="20" Width="126" Background="#FF3AA9AD" Foreground="White" Click="btnCancelar_Click"/>
 
-        <Border CornerRadius="10,0,0,10" Margin="0,0,798,0">
+        <Border CornerRadius="10,0,0,10" Margin="0,0,770,0">
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="#3AA9AD" Offset="0"/>
