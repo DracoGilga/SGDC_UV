@@ -59,6 +59,22 @@ namespace WcfService1.Model.DAO
             }
         }
 
+        public static int RegistrarConstancia(Constancia constancia)
+        {
+            try
+            {
+                DataClasses1ConstanciasDataContext DBConexion = GetConexion();
+                DBConexion.Constancias.InsertOnSubmit(constancia);
+                DBConexion.SubmitChanges();
+
+                return constancia.Id_Constancia;
+            }
+            catch (Exception)
+            {
+                return -1;
+            }
+        }
+
         public static DataClasses1ConstanciasDataContext GetConexion()
         {
             return new DataClasses1ConstanciasDataContext(global::System.Configuration.

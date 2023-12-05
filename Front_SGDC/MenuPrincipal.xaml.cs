@@ -25,25 +25,28 @@ namespace Front_SGDC
         }
         private void CerrarSesion(object sender, MouseButtonEventArgs e)
         {
-
+            MainWindow window = new MainWindow();
+            window.Show();
+            this.Close();
         }
         private void btnConstancias_clic(object sender, MouseButtonEventArgs e)
         {
-
+            
         }
         private void btnProfesor_clic(object sender, MouseButtonEventArgs e)
         {
-
+            CU_01 window = new CU_01();
+            window.ShowDialog();
         }
         private void btnConstularConstancia_clic(object sender, MouseButtonEventArgs e)
         {
             CU_07 window = new CU_07();
-            bool? result = window.ShowDialog();
+            window.ShowDialog();
         }
         private void btnEditarProfesor_clic(object sender, MouseButtonEventArgs e)
         {
             CU_03 window = new CU_03();
-            bool? result = window.ShowDialog();
+            window.ShowDialog();
         }
     }
 }
