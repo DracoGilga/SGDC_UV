@@ -112,6 +112,40 @@ namespace WcfService1.Model.DAO
                 return false;
             }
         }
+
+        public static Profesor BuscarProfesorNoPersonal(string numeroPersonal)
+        {
+            try
+            {
+                DataClasses1ConstanciasDataContext DBConexion = GetConexion();
+
+                var consulta = from p in DBConexion.Profesors
+                               where p.numeroPersonal == numeroPersonal
+                               select p;
+
+                var profesorEncontrado = consulta.SingleOrDefault();
+
+                if (profesorEncontrado != null)
+                {
+                    Profesor profesor = new Profesor()
+                    {
+                        Id_profesor = profesorEncontrado.Id_profesor,
+                        nombreCompleto = profesorEncontrado.nombreCompleto,
+                        numeroPersonal = profesorEncontrado.numeroPersonal
+                    };
+
+                    return profesor;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
         public static DataClasses1ConstanciasDataContext GetConexion()
         {
             return new DataClasses1ConstanciasDataContext(global::System.Configuration.

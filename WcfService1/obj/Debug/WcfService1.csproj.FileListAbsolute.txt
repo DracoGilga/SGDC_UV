@@ -12,3 +12,10 @@ C:\Users\endol\Source\Repos\SGDC_UV\WcfService1\obj\Debug\WcfService1.csproj.Ass
 C:\Users\endol\Source\Repos\SGDC_UV\WcfService1\obj\Debug\WcfService1.csproj.CoreCompileInputs.cache
 C:\Users\endol\Source\Repos\SGDC_UV\WcfService1\obj\Debug\WcfService1.dll
 C:\Users\endol\Source\Repos\SGDC_UV\WcfService1\obj\Debug\WcfService1.pdb
+C:\Users\hp\Desktop\APDS\SGDC_UV\WcfService1\bin\WcfService1.dll.config
+C:\Users\hp\Desktop\APDS\SGDC_UV\WcfService1\bin\WcfService1.dll
+C:\Users\hp\Desktop\APDS\SGDC_UV\WcfService1\bin\WcfService1.pdb
+C:\Users\hp\Desktop\APDS\SGDC_UV\WcfService1\obj\Debug\WcfService1.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\APDS\SGDC_UV\WcfService1\obj\Debug\WcfService1.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\APDS\SGDC_UV\WcfService1\obj\Debug\WcfService1.dll
+C:\Users\hp\Desktop\APDS\SGDC_UV\WcfService1\obj\Debug\WcfService1.pdb

@@ -59,5 +59,10 @@ namespace WcfService1
         {
             return Model.DAO.ConstanciaPladeaDAO.CrearConstanciaPladea(constancia, constanciaPladea);
         }
+
+        public Profesor BuscarProfesorNoPersonal(string numeroPersonal)
+        {
+            return Model.DAO.ProfesorDAO.BuscarProfesorNoPersonal(numeroPersonal);
+        }
     }
 }

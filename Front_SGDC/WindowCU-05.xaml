@@ -5,11 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Front_SGDC"
         mc:Ignorable="d"
-        Title="WindowCU_05" 
-        d:DesignHeight="800"
-        d:DesignWidth="1000">
-    <Grid>
+        Title="WindowCU_05"
+        d:DesignWidth="1000" Height="700">
+    <Grid Margin="0,0,0,166">
         <!-- Agrega un Frame donde se cargarán las páginas -->
-        <Frame x:Name="framePrincipal"/>
+        <Frame x:Name="framePrincipal" Margin="0,0,0,-157"/>
     </Grid>
 </Window>

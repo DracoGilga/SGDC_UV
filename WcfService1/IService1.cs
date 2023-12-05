@@ -38,5 +38,7 @@ namespace WcfService1
         bool CrearConstanciaProject(Constancia constancia, ConstanciaProyecto constanciaProyecto);
         [OperationContract]
         bool CrearConstanciaPladea(Constancia constancia, ConstanciaPLADEA constanciaPladea);
+        [OperationContract]
+        Profesor BuscarProfesorNoPersonal(string numeroPersonal);
     }
 }
