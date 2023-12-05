@@ -63,6 +63,7 @@ namespace WcfService1.Model.DAO
         {
             try
             {
+                constancia.fechaCreacionConstancia = DateTime.Now;
                 DataClasses1ConstanciasDataContext DBConexion = GetConexion();
                 DBConexion.Constancias.InsertOnSubmit(constancia);
                 DBConexion.SubmitChanges();

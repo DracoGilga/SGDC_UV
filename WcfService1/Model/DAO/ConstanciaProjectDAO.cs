@@ -12,11 +12,17 @@ namespace WcfService1.Model.DAO
             try
             {
                 constanciaProyecto.FK_Id_constancia = ConstanciaDAO.RegistrarConstancia(constancia);
-                DataClasses1ConstanciasDataContext DBConexion = GetConexion();
-                DBConexion.Constancias.InsertOnSubmit(constancia);
-                DBConexion.ConstanciaProyectos.InsertOnSubmit(constanciaProyecto);
-                DBConexion.SubmitChanges();
-                return true;
+                if (constanciaProyecto.FK_Id_constancia == -1)
+                {
+                    DataClasses1ConstanciasDataContext DBConexion = GetConexion();
+                    DBConexion.Constancias.InsertOnSubmit(constancia);
+                    DBConexion.ConstanciaProyectos.InsertOnSubmit(constanciaProyecto);
+                    DBConexion.SubmitChanges();
+                    return true;
+                }
+                else
+                    return false;
+                
             }
             catch (Exception)
             {
