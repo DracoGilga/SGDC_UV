@@ -23,5 +23,15 @@ namespace Front_SGDC
         {
             InitializeComponent();
         }
+
+        private void btnAgregarProfesor_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

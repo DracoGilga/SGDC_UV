@@ -23,11 +23,18 @@ namespace WcfService1
             return Model.DAO.PersonalAdministrativoDAO.Login(usuario, password);
         }
 
+<<<<<<< HEAD
+        public bool AgregarProfesor(Profesor profesor)
+        {
+            return Model.DAO.ProfesorDAO.RegistrarProfesor(profesor);
+        }
+=======
         public bool login2(PersonalAdministrativo personalAdministrativo)
         {
             return Model.DAO.PersonalAdministrativoDAO.Login2(personalAdministrativo);
         }
 
+>>>>>>> 02eb2cfa527e947f44032442bb7ac5a03d9c1c74
         public bool ModificarProfesor(Profesor profesor)
         {
             return Model.DAO.ProfesorDAO.ModificarProfesor(profesor);
