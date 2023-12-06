@@ -32,7 +32,7 @@ namespace Front_SGDC.Modelo
             else
                 return null;
         }
-        public async Task<bool> rearConstanciaJudge(Constancia constancia, ConstanciaJurado constanciaJurado)
+        public async Task<bool> CrearConstanciaJudge(Constancia constancia, ConstanciaJurado constanciaJurado)
         {
             Service1Client servicio = new Service1Client();
             if (servicio != null)
@@ -63,6 +63,21 @@ namespace Front_SGDC.Modelo
                 return await servicio.CrearConstanciaTeachingAsync(constancia, constanciaImparticion);
             else
                 return false;
+        }
+        public async Task<int> RegistrarConstancia(Constancia constancia)
+        {
+            Service1Client servicio = new Service1Client();
+            if (servicio != null)
+            {
+                if (await servicio.RegistrarConstanciaAsync(constancia) != -1)
+                {
+                    return 1;
+                }
+                return -1;
+
+            }
+            else
+                return -1;
         }
     }
 }

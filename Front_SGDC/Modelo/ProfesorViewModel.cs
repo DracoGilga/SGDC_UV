@@ -76,6 +76,27 @@ namespace Front_SGDC.Modelo
                 return false;
             }
         }
+        public Task<Profesor> BuscarProfesorNoPersonal(string numeroPersonal)
+        {
+            try
+            {
+                Service1Client servicio = new Service1Client();
+                if (servicio != null)
+                {
+                    servicio.BuscarProfesorNoPersonalAsync(numeroPersonal);
+                    if(servicio != null)
+                        return servicio.BuscarProfesorNoPersonalAsync(numeroPersonal);
+                    else
+                        return null;
+                }
+                else
+                    return null;
+            }
+            catch
+            {
+                return null;
+            }
+        }
 
     }
 }

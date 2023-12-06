@@ -55,7 +55,7 @@ namespace ServiceReference1
     public partial class Constancia : object
     {
         
-        private ServiceReference1.ConstanciaImparticion[] ConstanciaImparticionsField;
+        private ServiceReference1.ConstanciaImparticion[] ConstanciaImparticionField;
         
         private ServiceReference1.ConstanciaJurado[] ConstanciaJuradosField;
         
@@ -76,15 +76,15 @@ namespace ServiceReference1
         private System.DateTime fechaCreacionConstanciaField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ServiceReference1.ConstanciaImparticion[] ConstanciaImparticions
+        public ServiceReference1.ConstanciaImparticion[] ConstanciaImparticion
         {
             get
             {
-                return this.ConstanciaImparticionsField;
+                return this.ConstanciaImparticionField;
             }
             set
             {
-                this.ConstanciaImparticionsField = value;
+                this.ConstanciaImparticionField = value;
             }
         }
         
@@ -373,9 +373,9 @@ namespace ServiceReference1
         
         private string esperienciaEducativaField;
         
-        private System.TimeSpan horaField;
+        private string horaField;
         
-        private System.DateTime mesField;
+        private string mesField;
         
         private string prograamaEducativoField;
         
@@ -462,7 +462,7 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.TimeSpan hora
+        public string hora
         {
             get
             {
@@ -475,7 +475,7 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime mes
+        public string mes
         {
             get
             {
@@ -1039,6 +1039,12 @@ namespace ServiceReference1
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CrearConstanciaPladea", ReplyAction="http://tempuri.org/IService1/CrearConstanciaPladeaResponse")]
         System.Threading.Tasks.Task<bool> CrearConstanciaPladeaAsync(ServiceReference1.Constancia constancia, ServiceReference1.ConstanciaPLADEA constanciaPladea);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/RegistrarConstancia", ReplyAction="http://tempuri.org/IService1/RegistrarConstanciaResponse")]
+        System.Threading.Tasks.Task<int> RegistrarConstanciaAsync(ServiceReference1.Constancia constancia);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/BuscarProfesorNoPersonal", ReplyAction="http://tempuri.org/IService1/BuscarProfesorNoPersonalResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.Profesor> BuscarProfesorNoPersonalAsync(string numeroPersonal);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
@@ -1139,6 +1145,16 @@ namespace ServiceReference1
         public System.Threading.Tasks.Task<bool> CrearConstanciaPladeaAsync(ServiceReference1.Constancia constancia, ServiceReference1.ConstanciaPLADEA constanciaPladea)
         {
             return base.Channel.CrearConstanciaPladeaAsync(constancia, constanciaPladea);
+        }
+        
+        public System.Threading.Tasks.Task<int> RegistrarConstanciaAsync(ServiceReference1.Constancia constancia)
+        {
+            return base.Channel.RegistrarConstanciaAsync(constancia);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.Profesor> BuscarProfesorNoPersonalAsync(string numeroPersonal)
+        {
+            return base.Channel.BuscarProfesorNoPersonalAsync(numeroPersonal);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

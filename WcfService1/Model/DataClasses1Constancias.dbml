@@ -5,27 +5,12 @@
       <Column Name="fechaCreacionConstancia" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="FK_id_Profesor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="FK_Id_Firma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Constancia_ConstanciaImparticion" Member="ConstanciaImparticions" ThisKey="Id_Constancia" OtherKey="FK_Id_constancia" Type="ConstanciaImparticion" />
       <Association Name="Constancia_ConstanciaJurado" Member="ConstanciaJurados" ThisKey="Id_Constancia" OtherKey="FK_Id_constancia" Type="ConstanciaJurado" />
       <Association Name="Constancia_ConstanciaPLADEA" Member="ConstanciaPLADEAs" ThisKey="Id_Constancia" OtherKey="FK_Id_constancia" Type="ConstanciaPLADEA" />
       <Association Name="Constancia_ConstanciaProyecto" Member="ConstanciaProyectos" ThisKey="Id_Constancia" OtherKey="FK_Id_constancia" Type="ConstanciaProyecto" />
+      <Association Name="Constancia_ConstanciaImparticion" Member="ConstanciaImparticion" ThisKey="Id_Constancia" OtherKey="FK_Id_constancia" Type="ConstanciaImparticion" />
       <Association Name="FirmaElectronica_Constancia" Member="FirmaElectronica" ThisKey="FK_Id_Firma" OtherKey="Id_firma" Type="FirmaElectronica" IsForeignKey="true" />
       <Association Name="Profesor_Constancia" Member="Profesor" ThisKey="FK_id_Profesor" OtherKey="Id_profesor" Type="Profesor" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.ConstanciaImparticion" Member="ConstanciaImparticions">
-    <Type Name="ConstanciaImparticion">
-      <Column Name="Id_constanciaImparticion" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="bloque" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="credito" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="esperienciaEducativa" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="hora" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
-      <Column Name="mes" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="prograamaEducativo" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
-      <Column Name="seccion" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
-      <Column Name="semana" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
-      <Column Name="FK_Id_constancia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Constancia_ConstanciaImparticion" Member="Constancia" ThisKey="FK_Id_constancia" OtherKey="Id_Constancia" Type="Constancia" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.ConstanciaJurado" Member="ConstanciaJurados">
@@ -89,6 +74,21 @@
       <Column Name="nombreCompleto" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="numeroPersonal" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="Profesor_Constancia" Member="Constancias" ThisKey="Id_profesor" OtherKey="FK_id_Profesor" Type="Constancia" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ConstanciaImparticion" Member="ConstanciaImparticion">
+    <Type Name="ConstanciaImparticion">
+      <Column Name="Id_constanciaImparticion" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="bloque" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="credito" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="esperienciaEducativa" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="hora" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mes" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="prograamaEducativo" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="seccion" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="semana" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="FK_Id_constancia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Constancia_ConstanciaImparticion" Member="Constancia" ThisKey="FK_Id_constancia" OtherKey="Id_Constancia" Type="Constancia" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

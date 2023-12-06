@@ -18,6 +18,8 @@ using System.Windows.Shapes;
 using Font = iTextSharp.text.Font;
 using Paragraph = iTextSharp.text.Paragraph;
 using System.Globalization;
+using ServiceReference1;
+using Front_SGDC.Modelo;
 
 namespace Front_SGDC
 {
@@ -26,14 +28,11 @@ namespace Front_SGDC
     /// </summary>
     public partial class JudgeForm : Page
     {
-        public string professorName;
+        public string professorName = "";
         public JudgeForm()
         {
             InitializeComponent();
         }
-
-
-
         private void btnGenerate_Click(object sender, RoutedEventArgs e)
         {
             crearConstancias();
@@ -137,10 +136,20 @@ namespace Front_SGDC
             }
 
         }
-
-        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        private async void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
-            string numPersonal = tbxNumPersonal.ToString();
+            ProfesorViewModel profesorViewModel = new ProfesorViewModel();
+            if (tbxNumPersonal.Text != "")
+            {
+                Profesor professorName;
+                professorName = await profesorViewModel.BuscarProfesorNoPersonal(tbxNumPersonal.Text);
+                if (professorName != null)
+                    tbxNombreDeProfesor.Text = professorName.nombreCompleto;
+                else
+                    MessageBox.Show("No se ha encontrado el profesor");
+            }
+            else
+                MessageBox.Show("No se ha ingresado un número de personal");
         }
     }
 }

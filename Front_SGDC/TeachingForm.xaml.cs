@@ -14,9 +14,11 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Front_SGDC.Modelo;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
+using ServiceReference1;
 using Paragraph = iTextSharp.text.Paragraph;
 
 namespace Front_SGDC
@@ -145,9 +147,20 @@ namespace Front_SGDC
 
         }
 
-        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        private async void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
-
+            ProfesorViewModel profesorViewModel = new ProfesorViewModel();
+            if (tbxNumPersonal.Text != "")
+            {
+                Profesor professorName;
+                professorName = await profesorViewModel.BuscarProfesorNoPersonal(tbxNumPersonal.Text);
+                if (professorName != null)
+                    tbxNombreDeProfesor.Text = professorName.nombreCompleto;
+                else
+                    MessageBox.Show("No se ha encontrado el profesor");
+            }
+            else
+                MessageBox.Show("No se ha ingresado un número de personal");
         }
 
 

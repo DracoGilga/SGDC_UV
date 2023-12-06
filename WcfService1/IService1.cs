@@ -39,6 +39,8 @@ namespace WcfService1
         [OperationContract]
         bool CrearConstanciaPladea(Constancia constancia, ConstanciaPLADEA constanciaPladea);
         [OperationContract]
+        int RegistrarConstancia(Constancia constancia);
+        [OperationContract]
         Profesor BuscarProfesorNoPersonal(string numeroPersonal);
     }
 }

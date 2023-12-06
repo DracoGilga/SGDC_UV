@@ -66,7 +66,6 @@ namespace WcfService1.Model.DAO
                 constancia.fechaCreacionConstancia = DateTime.Now;
                 var consulta = new Constancia()
                 {
-                    Id_Constancia = 0,
                     fechaCreacionConstancia = constancia.fechaCreacionConstancia,
                     FK_id_Profesor = constancia.FK_id_Profesor, 
                     FK_Id_Firma = constancia.FK_Id_Firma

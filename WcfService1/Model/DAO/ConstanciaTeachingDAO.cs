@@ -27,7 +27,7 @@ namespace WcfService1.Model.DAO
                         semana = constanciaImparticion.semana
                     };
                     DataClasses1ConstanciasDataContext DBConexion = GetConexion();
-                    DBConexion.ConstanciaImparticions.InsertOnSubmit(consulta);
+                    DBConexion.ConstanciaImparticion.InsertOnSubmit(consulta);
                     DBConexion.SubmitChanges();
 
                     return true;

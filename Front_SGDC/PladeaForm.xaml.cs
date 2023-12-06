@@ -1,5 +1,7 @@
-﻿using iTextSharp.text;
+﻿using Front_SGDC.Modelo;
+using iTextSharp.text;
 using iTextSharp.text.pdf;
+using ServiceReference1;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -134,10 +136,20 @@ namespace Front_SGDC
         {
 
         }
-
-        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        private async void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
-
+            ProfesorViewModel profesorViewModel = new ProfesorViewModel();
+            if (tbxNumPersonal.Text != "")
+            {
+                Profesor professorName;
+                professorName = await profesorViewModel.BuscarProfesorNoPersonal(tbxNumPersonal.Text);
+                if (professorName != null)
+                    tbxNombreDeProfesor.Text = professorName.nombreCompleto;
+                else
+                    MessageBox.Show("No se ha encontrado el profesor");
+            }
+            else
+                MessageBox.Show("No se ha ingresado un número de personal");
         }
     }
 }
