@@ -12,7 +12,7 @@
  Target Server Version : 16001105 (16.00.1105)
  File Encoding         : 65001
 
- Date: 02/12/2023 20:07:32
+ Date: 05/12/2023 21:58:44
 */
 
 
@@ -47,8 +47,8 @@ CREATE TABLE [dbo].[ConstanciaImparticion] (
   [bloque] varchar(10) COLLATE Modern_Spanish_CI_AS  NOT NULL,
   [credito] varchar(10) COLLATE Modern_Spanish_CI_AS  NOT NULL,
   [esperienciaEducativa] varchar(100) COLLATE Modern_Spanish_CI_AS  NOT NULL,
-  [hora] time(7)  NOT NULL,
-  [mes] date  NOT NULL,
+  [hora] nvarchar(10) COLLATE Modern_Spanish_CI_AS  NOT NULL,
+  [mes] nvarchar(30) COLLATE Modern_Spanish_CI_AS  NOT NULL,
   [prograamaEducativo] varchar(255) COLLATE Modern_Spanish_CI_AS  NOT NULL,
   [seccion] varchar(255) COLLATE Modern_Spanish_CI_AS  NOT NULL,
   [semana] varchar(255) COLLATE Modern_Spanish_CI_AS  NOT NULL,
@@ -187,7 +187,7 @@ GO
 -- ----------------------------
 -- Auto increment value for Constancia
 -- ----------------------------
-DBCC CHECKIDENT ('[dbo].[Constancia]', RESEED, 40)
+DBCC CHECKIDENT ('[dbo].[Constancia]', RESEED, 1060)
 GO
 
 
@@ -219,7 +219,7 @@ GO
 -- ----------------------------
 -- Auto increment value for ConstanciaImparticion
 -- ----------------------------
-DBCC CHECKIDENT ('[dbo].[ConstanciaImparticion]', RESEED, 10)
+DBCC CHECKIDENT ('[dbo].[ConstanciaImparticion]', RESEED, 16)
 GO
 
 
@@ -245,7 +245,7 @@ GO
 -- ----------------------------
 -- Auto increment value for ConstanciaJurado
 -- ----------------------------
-DBCC CHECKIDENT ('[dbo].[ConstanciaJurado]', RESEED, 10)
+DBCC CHECKIDENT ('[dbo].[ConstanciaJurado]', RESEED, 11)
 GO
 
 
@@ -271,7 +271,7 @@ GO
 -- ----------------------------
 -- Auto increment value for ConstanciaPLADEA
 -- ----------------------------
-DBCC CHECKIDENT ('[dbo].[ConstanciaPLADEA]', RESEED, 10)
+DBCC CHECKIDENT ('[dbo].[ConstanciaPLADEA]', RESEED, 11)
 GO
 
 
@@ -297,7 +297,7 @@ GO
 -- ----------------------------
 -- Auto increment value for ConstanciaProyecto
 -- ----------------------------
-DBCC CHECKIDENT ('[dbo].[ConstanciaProyecto]', RESEED, 10)
+DBCC CHECKIDENT ('[dbo].[ConstanciaProyecto]', RESEED, 11)
 GO
 
 
@@ -323,7 +323,7 @@ GO
 -- ----------------------------
 -- Auto increment value for FirmaElectronica
 -- ----------------------------
-DBCC CHECKIDENT ('[dbo].[FirmaElectronica]', RESEED, 1000)
+DBCC CHECKIDENT ('[dbo].[FirmaElectronica]', RESEED, 2007)
 GO
 
 
@@ -355,7 +355,7 @@ GO
 -- ----------------------------
 -- Auto increment value for Profesor
 -- ----------------------------
-DBCC CHECKIDENT ('[dbo].[Profesor]', RESEED, 1000)
+DBCC CHECKIDENT ('[dbo].[Profesor]', RESEED, 1003)
 GO
 
 
